@@ -2,9 +2,9 @@ name: Publish Client NuGet Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "workshop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "workshop" ]
 
 jobs:
   build-and-publish:
