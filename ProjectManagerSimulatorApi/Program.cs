@@ -8,12 +8,15 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<EstimateRepository>();
 builder.Services.AddSingleton<DeadlineRepository>();
 
+builder.Services.AddOpenApi();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.MapOpenApi();
 }
+
 
 app.UseHttpsRedirection();
 
